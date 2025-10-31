@@ -29,12 +29,12 @@ const CardPreview = forwardRef<HTMLDivElement, CardPreviewProps>(
 			>
 				{image ? (
 					<Image
-						height={100}
-						width={100}
+						fill
+						sizes="(min-width: 1024px) 28vw, 60vw"
+						quality={90}
 						src={image || "/placeholder.svg"}
 						alt="Card background"
-						crossOrigin="anonymous"
-						className="absolute inset-0 w-full h-full object-cover"
+						className="object-cover"
 					/>
 				) : (
 					<div className="absolute inset-0 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">

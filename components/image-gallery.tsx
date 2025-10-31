@@ -151,11 +151,12 @@ export default function ImageGallery({
 							}`}
 						>
 							<Image
-								height={100}
-								width={100}
+								fill
+								sizes="(min-width: 1024px) 200px, 40vw"
+								quality={85}
 								src={image || "/placeholder.svg"}
 								alt={`Gallery image ${index + 1}`}
-								className="w-full h-full object-cover"
+								className="object-cover"
 							/>
 						</button>
 					))}
